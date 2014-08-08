@@ -1,8 +1,33 @@
 <link rel="import" href="../bower_components/brick-common/brick-common.html">
 
 <template>
-  <style></style>
-  <style></style>
+  <style>:host {
+  display: inline-block;
+  position: relative;
+  border: 0;
+  background: transparent;
+  text-align: center;
+  outline: none;
+  border-radius: 30px;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  padding: 10px;
+}
+:host([disabled]) {
+  color: #808080;
+  pointer-events: none;
+  cursor: auto;
+}
+</style>
+  <style>:host {
+  color: #00caf2;
+}
+:host([default]) {
+  background-color: #00caf2;
+  color: #fff;
+}
+</style>
   <content></content>
 </template>
 
