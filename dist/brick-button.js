@@ -1,3 +1,5 @@
+/* global Platform */
+
 (function () {
 
   var currentScript = document._currentScript || document.currentScript;
@@ -30,6 +32,8 @@
     // create shadowRoot and append template
     var shadowRoot = this.createShadowRoot();
     shadowRoot.appendChild(templateContent.cloneNode(true));
+
+    this.setAttribute('role', 'button');
 
   };
 

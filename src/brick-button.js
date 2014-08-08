@@ -33,6 +33,8 @@
     var shadowRoot = this.createShadowRoot();
     shadowRoot.appendChild(templateContent.cloneNode(true));
 
+    this.setAttribute('role', 'button');
+
   };
 
   BrickButtonElementPrototype.attachedCallback = function () {
