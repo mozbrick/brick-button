@@ -10,6 +10,8 @@
 
     <!-- Importing Custom Elemenent -->
     <link rel="import" href="dist/brick-button.local.html">
+    <link rel="import" href="bower_components/brick-action/dist/brick-action.html">
+    <link rel="import" href="bower_components/brick-dialog/dist/brick-dialog.html">
     <style type="text/css">
     body {
       font-family: sans-serif;
@@ -19,9 +21,15 @@
   <body>
 
     <!-- Using Custom Element -->
-    Hi <brick-button>I am a button</brick-button>
-    <brick-button disabled>I am a button</brick-button>
-    <brick-button default>I am a button</brick-button>
+    Hi <brick-button target="hello" action="show" default>I am a button</brick-button>
+
+    <brick-dialog id="hello">
+      <header>Title</header>
+      <section>Hello you</section>
+      <footer>
+        <brick-button target="hello" action="hide">I am a button</brick-button>
+      </footer>
+    </brick-button>
 
   </body>
 </html>
