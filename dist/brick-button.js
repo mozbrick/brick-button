@@ -81,7 +81,8 @@
   // Register the element
 
   window.BrickButtonElement = document.registerElement('brick-button', {
-    prototype: BrickButtonElementPrototype
+    prototype: BrickButtonElementPrototype,
+    extends: 'brick-action'
   });
 
 })();
