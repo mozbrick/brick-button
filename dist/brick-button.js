@@ -1,5 +1,3 @@
-/* global Platform */
-
 (function () {
 
   var currentScript = document._currentScript || document.currentScript;
