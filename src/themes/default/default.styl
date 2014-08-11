@@ -8,4 +8,7 @@ $brand-blue = #00CAF2
     background-color: $brand-blue;
     color: #fff;
   }
+  &([default][disabled]) {
+      background-color: saturation($brand-blue, 15%);
+    }
 }
