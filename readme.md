@@ -17,7 +17,7 @@
 2. Import Custom Element:
 
     ```html
-    <link rel="import" href="src/brick-button.html">
+    <link rel="import" href="dist/brick-button.html">
     ```
 
 3. Start using it:
@@ -30,19 +30,9 @@
 
 Attribute     | Options     | Default      | Description
 ---           | ---         | ---          | ---
-`foo`         | *string*    | `bar`        | An Attribute.
+`disabled`    | None        | None         | Button is disabled
 
-## Methods
-
-Method        | Parameters   | Returns     | Description
----           | ---          | ---         | ---
-`method()`    | None.        | Nothing.    | A method.
-
-## Events
-
-Event         | Description
----           | ---
-`onsomething` | Triggers when something happens.
+For other attributes, methods and event, see [brick-action](https://github.com/mozbrick/brick-action).
 
 ## Development
 
