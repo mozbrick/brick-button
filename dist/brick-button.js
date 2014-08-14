@@ -16,15 +16,17 @@
     }
   }
 
-  var BrickButtonElementPrototype = Object.create(HTMLElement.prototype);
+  var BrickButtonElementPrototype = Object.create(window.BrickActionElement.prototype);
 
   // Lifecycle methods
 
   BrickButtonElementPrototype.createdCallback = function () {
 
+    window.BrickActionElement.prototype.createdCallback.call(this);
+
     // import template
     var importDoc = currentScript.ownerDocument;
-    var templateContent = importDoc.querySelector('template').content;
+    var templateContent = importDoc.querySelector('#brick-button-template').content;
 
     // fix styling for polyfill
     shimShadowStyles(templateContent.querySelectorAll('style'),'brick-button');
@@ -37,52 +39,10 @@
 
   };
 
-  BrickButtonElementPrototype.attachedCallback = function () {
-
-  };
-
-  BrickButtonElementPrototype.detachedCallback = function () {
-
-  };
-
-  BrickButtonElementPrototype.attributeChangedCallback = function (attr, oldVal, newVal) {
-    if (attr in attrs) {
-      attrs[attr].call(this, oldVal, newVal);
-    }
-  };
-
-  // Attribute handlers
-
-  var attrs = {
-    'attr': function (oldVal, newVal) {
-
-    }
-  };
-
-  // Custom methods
-
-  BrickButtonElementPrototype.foo = function () {
-
-  };
-
-  // Property handlers
-
-  Object.defineProperties(BrickButtonElementPrototype, {
-    'prop': {
-      get : function () {
-
-      },
-      set : function (newVal) {
-
-      }
-    }
-  });
-
   // Register the element
 
   window.BrickButtonElement = document.registerElement('brick-button', {
-    prototype: BrickButtonElementPrototype,
-    extends: 'brick-action'
+    prototype: BrickButtonElementPrototype
   });
 
 })();
