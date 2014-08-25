@@ -1,0 +1,38 @@
+{
+  "name": "brick-dialog",
+  "homepage": "https://github.com/mozbrick/brick-dialog",
+  "authors": [
+    "mozilla"
+  ],
+  "description": "A simple dialog.",
+  "main": "dist/brick-dialog.html",
+  "keywords": [
+    "brick",
+    "webcomponents"
+  ],
+  "license": "ISC",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "brick-common": "~0.1.3",
+    "platform": "Polymer/platform"
+  },
+  "devDependencies": {
+    "brick-action": "mozbrick/brick-action",
+    "brick-input": "mozbrick/brick-input"
+  },
+  "_release": "76f3321ac9",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "76f3321ac9bd41b15852b0174f2ec8e6ca3d46a1"
+  },
+  "_source": "git://github.com/mozbrick/brick-dialog.git",
+  "_target": "*",
+  "_originalSource": "mozbrick/brick-dialog"
+}
